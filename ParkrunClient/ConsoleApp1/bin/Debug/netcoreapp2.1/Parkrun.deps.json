@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "782842e7c083a6dec93d3dce85bec868b24b9488"
+    "signature": "75a88f2af7d3e5d2d53288969a4e3541b645603a"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.0.0-preview.18572.1",
           "Microsoft.Extensions.Logging": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Logging.Console": "3.0.0-preview.18572.1",
           "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
@@ -90,6 +91,31 @@
           }
         }
       },
+      "Microsoft.Extensions.Logging.Configuration/3.0.0-preview.18572.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.0.0-preview.18572.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.18326"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Console/3.0.0-preview.18572.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Logging": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Logging.Configuration": "3.0.0-preview.18572.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.18326"
+          }
+        }
+      },
       "Microsoft.Extensions.Options/3.0.0-preview.18572.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0-preview.18572.1",
@@ -98,6 +124,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.18326"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/3.0.0-preview.18572.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Configuration.Binder": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Options": "3.0.0-preview.18572.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.0.0.18326"
           }
@@ -190,12 +230,33 @@
       "path": "microsoft.extensions.logging.abstractions/3.0.0-preview.18572.1",
       "hashPath": "microsoft.extensions.logging.abstractions.3.0.0-preview.18572.1.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Configuration/3.0.0-preview.18572.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LhkYVBkxa20k1ldy3I9ZBQ6HkBl6AuhGmrot581Bb47ZT2yLtusObch3kqFUDf2/dUOZQwQ/t38fY7c/EhTb5Q==",
+      "path": "microsoft.extensions.logging.configuration/3.0.0-preview.18572.1",
+      "hashPath": "microsoft.extensions.logging.configuration.3.0.0-preview.18572.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Console/3.0.0-preview.18572.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b1459NRFJsLPSQyrqJd+5x0s6KFSK/o55QZjf4KOnO8Diz5QHHKaqT1Lwchmq52nNm9OY3fz1ztOMKGiTl1dag==",
+      "path": "microsoft.extensions.logging.console/3.0.0-preview.18572.1",
+      "hashPath": "microsoft.extensions.logging.console.3.0.0-preview.18572.1.nupkg.sha512"
+    },
     "Microsoft.Extensions.Options/3.0.0-preview.18572.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/dh8rohwjHqRNshUsrJPZkkVulcjq+J75S2wIKHAotwEZ7YziewWokLlNVAujXHE6aqGjW85bLIWvG7r2OogaQ==",
       "path": "microsoft.extensions.options/3.0.0-preview.18572.1",
       "hashPath": "microsoft.extensions.options.3.0.0-preview.18572.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/3.0.0-preview.18572.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FdFnCwiKZMyVpaEs//1yd0/g2gzT3++9/zdxQl5JPw2ZCUqXJ9/A+B3frOjbnhrXObg2Tb7mF3uXXfVaqFuUVA==",
+      "path": "microsoft.extensions.options.configurationextensions/3.0.0-preview.18572.1",
+      "hashPath": "microsoft.extensions.options.configurationextensions.3.0.0-preview.18572.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/3.0.0-preview.18572.1": {
       "type": "package",

@@ -15,10 +15,16 @@ namespace Parkrun.Services
 		{
 		}
 
-		public override async Task<IEnumerable<ParkrunModel>> GetAllAsync(string requestUri)
+		public override async Task<IEnumerable<ParkrunModel>> GetAllAsync(string requestUri, string token = null)
 		{
-			IEnumerable<ParkrunModel> parkruns = await base.GetAllAsync(requestUri);
+			IEnumerable<ParkrunModel> parkruns = await base.GetAllAsync(requestUri,token);
 			return parkruns.OrderBy(p => p.Id);
+		}
+
+		public override async Task<ParkrunModel> GetAsync(string requestUri, string token = null)
+		{
+			ParkrunModel parkrun = await base.GetAsync(requestUri, token);
+			return parkrun;
 		}
 	}
 }

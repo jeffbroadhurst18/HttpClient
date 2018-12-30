@@ -6,3 +6,6 @@ C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\obj\Debug\netcoreapp
 C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\obj\Debug\netcoreapp2.1\Parkrun.csproj.CoreCompileInputs.cache
 C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\obj\Debug\netcoreapp2.1\Parkrun.AssemblyInfoInputs.cache
 C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\obj\Debug\netcoreapp2.1\Parkrun.AssemblyInfo.cs
+C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\bin\Debug\netcoreapp2.1\Parkrun.pdb
+C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\obj\Debug\netcoreapp2.1\Parkrun.dll
+C:\Users\Jeff\Source\Repos\Client\ParkrunClient\ConsoleApp1\obj\Debug\netcoreapp2.1\Parkrun.pdb

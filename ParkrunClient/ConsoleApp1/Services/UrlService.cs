@@ -8,6 +8,6 @@ namespace Parkrun.Services
 	{
 		public string BaseAddress => "https://localhost:7272/";
 		public string ParkrunApi => "api/parkrun/";
-		public string UserApi => "api/users/";
+		public string UserApi => "api/users/authenticate";
 	}
 }
