@@ -66,9 +66,8 @@ namespace Parkrun.Services
 			if (token != null)
 			{
 				_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-				json = "\"" + json.Replace("\"", "'") + "\"";
 			}
-			
+
 			HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 			HttpResponseMessage resp = await _httpClient.PostAsync(requestUri, content);
 			LogInformation($"status from POST { resp.StatusCode}");
@@ -78,8 +77,40 @@ namespace Parkrun.Services
 			return JsonConvert.DeserializeObject<T>(json);
 		}
 
+		public async virtual Task<T> PutAsync(string requestUri, T item, string token = null)
+		{
+			if (requestUri == null) { throw new ArgumentNullException(nameof(requestUri)); }
+			if (item == null) { throw new ArgumentNullException(nameof(item)); }
+			string json = JsonConvert.SerializeObject(item);
+			if (token != null)
+			{
+				_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+			}
+
+			HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+			HttpResponseMessage resp = await _httpClient.PutAsync(requestUri, content);
+			LogInformation($"status from PUT { resp.StatusCode}");
+			resp.EnsureSuccessStatusCode();
+			LogInformation($"updated resource at {resp.Headers.Location}");
+
+			return item;
+		}
+
+		public async virtual Task DeleteAsync(string requestUri, string token = null)
+		{
+			if (requestUri == null) { throw new ArgumentNullException(nameof(requestUri)); }
+			if (token != null)
+			{
+				_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+			}
+
+			HttpResponseMessage resp = await _httpClient.DeleteAsync(requestUri);
+			LogInformation($"status from DELETE { resp.StatusCode}");
+			resp.EnsureSuccessStatusCode();
+		}
+
 		private void LogInformation(string message, [CallerMemberName] string callerName = null) =>
-			_logger.LogInformation($"{nameof(HttpClientService<T>)}.{callerName}: message");
+		_logger.LogInformation($"{nameof(HttpClientService<T>)}.{callerName}: message");
 
 		#region IDisposable Support
 		private bool _objectDisposed = false;
@@ -100,6 +131,6 @@ namespace Parkrun.Services
 		{
 			Dispose(true);
 		}
-		#endregion 
+		#endregion
 	}
 }

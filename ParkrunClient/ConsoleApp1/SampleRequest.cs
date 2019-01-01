@@ -20,20 +20,33 @@ namespace Parkrun
 			_userClient = userClient;
 		}
 
-		internal async Task ReadParkrunAsync(string token, int race)
+		public async Task ReadParkrunAsync(string token, int race)
 		{
 			Console.WriteLine(nameof(ReadParkrunAsync));
 			ParkrunModel parkrun = await _client.GetAsync(_urlService.ParkrunApi + race.ToString(), token);
 			Console.WriteLine(parkrun.Id + " " + parkrun.Race + " " + parkrun.RaceDate + " " + parkrun.Position + " " + parkrun.Minutes + ":" + parkrun.Seconds + " " + parkrun.Grade);
 		}
 
-		internal async Task AddParkrunAsync(string token, ParkrunModel parkrun)
+		public async Task AddParkrunAsync(string token, ParkrunModel parkrun)
 		{
 			Console.WriteLine(nameof(AddParkrunAsync));
 			ParkrunModel retrieved = await _client.PostAsync(_urlService.ParkrunApi, parkrun, token);
 		}
 
-		public async Task ReadParkrunsAsync(string token)
+		public async Task<ParkrunModel> UpdateParkrunAsync(string token, ParkrunModel parkrun)
+		{
+			Console.WriteLine(nameof(UpdateParkrunAsync));
+			ParkrunModel retrieved = await _client.PutAsync(_urlService.ParkrunApi, parkrun, token);
+			return retrieved;
+		}
+
+		public async Task DeleteParkrunAsync(string token,int id)
+		{
+			Console.WriteLine(nameof(DeleteParkrunAsync));
+			await _client.DeleteAsync(_urlService.ParkrunApi + id.ToString());
+		}
+
+		public async Task<IEnumerable<ParkrunModel>> ReadParkrunsAsync(string token)
 		{
 			Console.WriteLine(nameof(ReadParkrunsAsync));
 			IEnumerable<ParkrunModel> parkruns = await _client.GetAllAsync(_urlService.ParkrunApi,token);
@@ -41,6 +54,7 @@ namespace Parkrun
 			{
 				Console.WriteLine(parkrun.Id + " " + parkrun.Race + " " + parkrun.RaceDate + " " + parkrun.Position + " " + parkrun.Minutes + ":" + parkrun.Seconds + " " + parkrun.Grade);
 			}
+			return parkruns;
 		}
 
 		public async Task<string> Login()

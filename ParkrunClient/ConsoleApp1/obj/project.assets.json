@@ -38,6 +38,33 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
+      "Microsoft.Extensions.Configuration.FileExtensions/3.0.0-preview.18572.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.FileProviders.Physical": "3.0.0-preview.18572.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/3.0.0-preview.18572.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.Configuration.FileExtensions": "3.0.0-preview.18572.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/3.0.0-preview.18572.1": {
         "type": "package",
         "dependencies": {
@@ -57,6 +84,40 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/3.0.0-preview.18572.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.0.0-preview.18572.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/3.0.0-preview.18572.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "3.0.0-preview.18572.1",
+          "Microsoft.Extensions.FileSystemGlobbing": "3.0.0-preview.18572.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/3.0.0-preview.18572.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/3.0.0-preview.18572.1": {
@@ -433,6 +494,30 @@
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
+    "Microsoft.Extensions.Configuration.FileExtensions/3.0.0-preview.18572.1": {
+      "sha512": "Oo/SWkcTH9Vbmz8hgnnVPHc0CBqHDouBqdJaiyExiTS3BlPWNu2i/EbGlSyohlQDa5pC8QvL+LNLvN9sn1gqFA==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.fileextensions/3.0.0-preview.18572.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.xml",
+        "microsoft.extensions.configuration.fileextensions.3.0.0-preview.18572.1.nupkg.sha512",
+        "microsoft.extensions.configuration.fileextensions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Json/3.0.0-preview.18572.1": {
+      "sha512": "jLupwSr+l+k74Wd+7lO2heHEc9382hoTRl107FNs9YU/PAO4/xFSuxfNvErH2dy3uK8JgOCbTNUVXOwGDn/XpQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.json/3.0.0-preview.18572.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml",
+        "microsoft.extensions.configuration.json.3.0.0-preview.18572.1.nupkg.sha512",
+        "microsoft.extensions.configuration.json.nuspec"
+      ]
+    },
     "Microsoft.Extensions.DependencyInjection/3.0.0-preview.18572.1": {
       "sha512": "x+pXTr6uY2xkES2kmpQhCOSSIjHAxkEy3PxjpAlmv9Wk8DQd1NRaiLPGYatCSF4Im48naUaEbmb7nW1ILSRAzw==",
       "type": "package",
@@ -459,6 +544,42 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "microsoft.extensions.dependencyinjection.abstractions.3.0.0-preview.18572.1.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/3.0.0-preview.18572.1": {
+      "sha512": "vQa+G65rCsHMxbfzpsZKSivCRZMgVD9LL4wnntKDrt3yi5+omy7oGc0MekARWEyILZdb48m0QCYQIo6POGhIxw==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/3.0.0-preview.18572.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.3.0.0-preview.18572.1.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Physical/3.0.0-preview.18572.1": {
+      "sha512": "bvGlDzHHTUnLm33G9ZpLHDpzUYnPirAmYDKNAyxyYc+nzJhfdBg7J2HOO/JPkQjfmjH9sAdCKW6ZyRNa/HipPQ==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.physical/3.0.0-preview.18572.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.xml",
+        "microsoft.extensions.fileproviders.physical.3.0.0-preview.18572.1.nupkg.sha512",
+        "microsoft.extensions.fileproviders.physical.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/3.0.0-preview.18572.1": {
+      "sha512": "9kfmW+Q4IABIc6J1IxAMKllds54wzEUU64UcfbHmQsPWNK2SRuhnTg6MYajYXhLYpKoxqLPLPehvuYoTshgrlA==",
+      "type": "package",
+      "path": "microsoft.extensions.filesystemglobbing/3.0.0-preview.18572.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+        "microsoft.extensions.filesystemglobbing.3.0.0-preview.18572.1.nupkg.sha512",
+        "microsoft.extensions.filesystemglobbing.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/3.0.0-preview.18572.1": {
@@ -1183,9 +1304,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Microsoft.Extensions.Configuration >= 3.0.0-preview.18572.1",
+      "Microsoft.Extensions.Configuration.FileExtensions >= 3.0.0-preview.18572.1",
+      "Microsoft.Extensions.Configuration.Json >= 3.0.0-preview.18572.1",
       "Microsoft.Extensions.DependencyInjection >= 3.0.0-preview.18572.1",
       "Microsoft.Extensions.Logging >= 3.0.0-preview.18572.1",
       "Microsoft.Extensions.Logging.Console >= 3.0.0-preview.18572.1",
+      "Microsoft.Extensions.Options >= 3.0.0-preview.18572.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Newtonsoft.Json >= 12.0.1"
     ]
@@ -1231,6 +1356,18 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "[3.0.0-preview.18572.1, )"
+          },
+          "Microsoft.Extensions.Configuration.FileExtensions": {
+            "target": "Package",
+            "version": "[3.0.0-preview.18572.1, )"
+          },
+          "Microsoft.Extensions.Configuration.Json": {
+            "target": "Package",
+            "version": "[3.0.0-preview.18572.1, )"
+          },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[3.0.0-preview.18572.1, )"
@@ -1240,6 +1377,10 @@
             "version": "[3.0.0-preview.18572.1, )"
           },
           "Microsoft.Extensions.Logging.Console": {
+            "target": "Package",
+            "version": "[3.0.0-preview.18572.1, )"
+          },
+          "Microsoft.Extensions.Options": {
             "target": "Package",
             "version": "[3.0.0-preview.18572.1, )"
           },
